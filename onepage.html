@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>粽香启夏 · 端午食饮赛道爆品趋势</title>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Noto+Serif+SC:wght@700;900&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg-deep:#0d1f1c;
+  --bg-card:#162b27;
+  --bg-card-2:#1f3530;
+  --accent:#ffd966;
+  --accent-2:#ff9558;
+  --accent-glow:rgba(255,217,102,.18);
+  --text:#f1ede4;
+  --text-mute:#9ba9a4;
+  --line:#2d3f3a;
+  --green:#56c596;
+  --red:#ff7770;
+  --font-display:'Noto Serif SC','思源宋体',serif;
+  --font-en:'Archivo Black',sans-serif;
+  --font-body:'Plus Jakarta Sans','PingFang SC',sans-serif;
+  --ease:cubic-bezier(0.16,1,0.3,1);
+}
+html,body{background:var(--bg-deep);color:var(--text);font-family:var(--font-body);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+body{
+  background:
+    radial-gradient(1200px 600px at 80% -10%,rgba(255,217,102,.08),transparent 60%),
+    radial-gradient(800px 600px at 0% 100%,rgba(86,197,150,.06),transparent 60%),
+    var(--bg-deep);
+  min-height:100vh;padding:0;
+}
+.page{max-width:1080px;margin:0 auto;padding:64px 56px;position:relative}
+
+/* 顶部品牌条 */
+.brand-bar{display:flex;justify-content:space-between;align-items:center;padding-bottom:32px;border-bottom:1px solid var(--line);margin-bottom:56px}
+.brand-bar .logo{font-family:var(--font-en);font-size:14px;letter-spacing:2px;color:var(--accent)}
+.brand-bar .meta{font-size:12px;color:var(--text-mute);letter-spacing:1.5px;text-transform:uppercase}
+
+/* Hero */
+.hero{margin-bottom:64px;position:relative}
+.hero .eyebrow{display:inline-block;font-family:var(--font-en);font-size:12px;letter-spacing:3px;color:var(--accent);background:var(--accent-glow);padding:8px 16px;border-radius:999px;margin-bottom:24px}
+.hero h1{
+  font-family:var(--font-display);
+  font-weight:900;
+  font-size:88px;
+  line-height:1.05;
+  letter-spacing:-2px;
+  margin-bottom:24px;
+  background:linear-gradient(180deg,#fff 0%,#ffd966 100%);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+}
+.hero h1 .accent{color:var(--accent);background:none;-webkit-text-fill-color:var(--accent)}
+.hero .subtitle{font-size:22px;color:var(--text-mute);font-weight:400;line-height:1.5;max-width:780px}
+.hero .subtitle b{color:var(--accent);font-weight:700}
+
+/* 三个核心数字 */
+.stats-row{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;margin-top:48px;padding-top:48px;border-top:1px dashed var(--line)}
+.stat{position:relative}
+.stat .num{font-family:var(--font-en);font-size:64px;line-height:1;color:var(--accent);margin-bottom:8px}
+.stat .label{font-size:13px;color:var(--text-mute);letter-spacing:1px}
+.stat::before{content:'';position:absolute;top:-48px;left:0;width:32px;height:2px;background:var(--accent)}
+
+/* 区块标题 */
+.section-h{display:flex;align-items:baseline;gap:16px;margin:80px 0 32px}
+.section-h .num{font-family:var(--font-en);font-size:14px;color:var(--accent);letter-spacing:2px}
+.section-h .title{font-family:var(--font-display);font-size:36px;font-weight:900;color:var(--text);letter-spacing:-1px}
+.section-h .desc{font-size:14px;color:var(--text-mute);margin-left:auto}
+
+/* 5 大趋势 */
+.trends{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.trend-card{background:var(--bg-card);border:1px solid var(--line);border-radius:12px;padding:24px;position:relative;overflow:hidden;transition:all .3s var(--ease)}
+.trend-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--accent),transparent)}
+.trend-card .tag{display:inline-block;font-size:11px;color:var(--accent);letter-spacing:1.5px;font-weight:700;margin-bottom:12px;text-transform:uppercase;font-family:var(--font-en)}
+.trend-card h3{font-family:var(--font-display);font-weight:700;font-size:18px;color:var(--text);margin-bottom:8px;line-height:1.4}
+.trend-card p{font-size:13px;color:var(--text-mute);line-height:1.7}
+.trend-card.full{grid-column:1/-1;background:linear-gradient(135deg,var(--bg-card-2),var(--bg-card));border-color:var(--accent);border-width:1px}
+.trend-card.full::before{background:var(--accent);height:3px}
+
+/* 拓展机会清单 */
+.opportunities{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:24px}
+.opp-card{background:var(--bg-card);border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:8px;padding:16px 20px;transition:all .2s var(--ease)}
+.opp-card:hover{border-left-color:var(--accent-2);transform:translateX(4px)}
+.opp-card .cat{display:flex;align-items:center;gap:8px;font-size:13px;font-weight:700;color:var(--accent);margin-bottom:8px}
+.opp-card .cat .emoji{font-size:18px}
+.opp-card .items{font-size:13.5px;color:var(--text);line-height:1.7}
+.opp-card .items span{display:inline-block;background:rgba(255,217,102,.08);border:1px solid rgba(255,217,102,.2);border-radius:4px;padding:2px 8px;margin:2px 4px 2px 0;font-size:12px;color:#ffe699}
+
+/* CTA */
+.cta{margin-top:80px;padding:48px;background:linear-gradient(135deg,#1a3530 0%,#2a4540 100%);border:1px solid var(--accent);border-radius:16px;text-align:center;position:relative;overflow:hidden}
+.cta::before{content:'';position:absolute;top:-50%;right:-20%;width:400px;height:400px;background:radial-gradient(circle,var(--accent-glow),transparent 70%);pointer-events:none}
+.cta h2{font-family:var(--font-display);font-size:32px;font-weight:900;margin-bottom:12px;letter-spacing:-1px;position:relative}
+.cta p{font-size:15px;color:var(--text-mute);margin-bottom:32px;position:relative}
+.cta .url{display:inline-block;font-family:var(--font-en);font-size:18px;color:var(--accent);background:rgba(0,0,0,.4);border:1px solid var(--accent);padding:18px 40px;border-radius:999px;letter-spacing:1px;position:relative;transition:all .3s var(--ease)}
+.cta .url:hover{background:var(--accent);color:#0d1f1c}
+.cta .arrow{display:inline-block;margin-left:8px;transition:transform .3s var(--ease)}
+.cta .url:hover .arrow{transform:translateX(4px)}
+
+/* 底部备注 */
+.footer-note{margin-top:48px;padding-top:32px;border-top:1px solid var(--line);font-size:12px;color:var(--text-mute);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
+.footer-note .left{font-family:var(--font-en);letter-spacing:1.5px}
+
+/* 装饰元素 */
+.deco-grid{position:absolute;top:64px;right:56px;width:120px;height:120px;opacity:.15;pointer-events:none}
+.deco-grid svg{width:100%;height:100%}
+
+/* 数字徽章 */
+.badge{display:inline-block;font-family:var(--font-en);font-size:10px;letter-spacing:2px;color:var(--accent);border:1px solid var(--accent);padding:2px 8px;border-radius:3px;margin-left:8px}
+
+/* 动画 */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.reveal.d1{transition-delay:.1s}.reveal.d2{transition-delay:.2s}.reveal.d3{transition-delay:.3s}
+.reveal.d4{transition-delay:.4s}.reveal.d5{transition-delay:.5s}.reveal.d6{transition-delay:.6s}
+
+@media (prefers-reduced-motion:reduce){.reveal{transition:none;opacity:1;transform:none}}
+@media (max-width:768px){
+  .page{padding:32px 20px}
+  .hero h1{font-size:48px}
+  .hero .subtitle{font-size:16px}
+  .stats-row{grid-template-columns:1fr;gap:24px}
+  .stat .num{font-size:48px}
+  .trends,.opportunities{grid-template-columns:1fr}
+  .section-h .title{font-size:24px}
+  .cta{padding:32px 24px}
+  .cta h2{font-size:22px}
+  .cta .url{font-size:14px;padding:14px 24px;word-break:break-all;display:block}
+}
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- 装饰网格 -->
+  <div class="deco-grid">
+    <svg viewBox="0 0 100 100"><defs><pattern id="g" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="#ffd966" stroke-width=".5"/></pattern></defs><rect width="100" height="100" fill="url(#g)"/></svg>
+  </div>
+
+  <!-- 顶部品牌条 -->
+  <div class="brand-bar">
+    <div class="logo reveal">DUANWU · INSIGHT 2026</div>
+    <div class="meta reveal">2025.5.11 — 2025.6.7 · 4 WEEKS</div>
+  </div>
+
+  <!-- Hero -->
+  <div class="hero">
+    <div class="eyebrow reveal">FOR INTERNAL USE · 销售 / 运营 / 行业团队 必读</div>
+    <h1 class="reveal d1">粽香启夏<br><span class="accent">端午食饮 · 爆品风口</span></h1>
+    <p class="subtitle reveal d2">
+      把去年端午周期视频号小店全域 <b>TOP 8000 个爆品</b>，<br>
+      跟我们 2026 年 <b>ADQ 在投商品池</b>硬碰硬交叉比对，<br>
+      帮你找出<b>"去年爆但今年还没人投"</b>的拓客金矿。
+    </p>
+
+    <!-- 三个核心数字 -->
+    <div class="stats-row">
+      <div class="stat reveal d3">
+        <div class="num">7,915</div>
+        <div class="label">去年端午爆品 · 4 份榜单合并去重</div>
+      </div>
+      <div class="stat reveal d4">
+        <div class="num">10</div>
+        <div class="label">大品类全覆盖 · 趋势 × 拓展机会一图看穿</div>
+      </div>
+      <div class="stat reveal d5">
+        <div class="num">22+</div>
+        <div class="label">具体待拓展品种 · 直接转销售/运营 P0 拓客</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 5 大核心趋势 -->
+  <div class="section-h">
+    <span class="num reveal">01 · OVERVIEW</span>
+    <span class="title reveal d1">5 大核心趋势贯穿全品类</span>
+    <span class="desc reveal d2">看趋势 · 抓方向</span>
+  </div>
+
+  <div class="trends">
+    <div class="trend-card reveal d1">
+      <span class="tag">节令心智</span>
+      <h3>端午刚需 · 锁定 4 大节点商品</h3>
+      <p>粽子 / 海鸭蛋·咸鸭蛋 / 花雕料酒 / 解油腻草本花茶<br>从礼盒到佐餐到茶饮，全链路覆盖端午餐桌。</p>
+    </div>
+    <div class="trend-card reveal d2">
+      <span class="tag">入夏季节</span>
+      <h3>清凉解暑 + 控卡轻代餐</h3>
+      <p>白凉粉 / 仙草粉 / NFC果汁 / 燕麦麸代餐 / 磷虾肉轻食<br>覆盖 DIY 冰品→饮品→主菜→代餐全场景。</p>
+    </div>
+    <div class="trend-card reveal d3">
+      <span class="tag">高频口味</span>
+      <h3>5 大味型横扫 · 酸甜果味 / 榴莲 / 奶香 / 酱卤咸香 / 麻辣酸辣</h3>
+      <p>跨多品类基本盘，是 ADQ 创意撰写最稳的方向。</p>
+    </div>
+    <div class="trend-card reveal d4">
+      <span class="tag">工艺/形态</span>
+      <h3>即食化 + 冷链化 + 轻量化</h3>
+      <p>真空开袋即食占 TOP10 半数<br>液氮锁鲜冷链直发建产地溯源信任<br>1 元小份引流款拉新</p>
+    </div>
+    <div class="trend-card full reveal d5">
+      <span class="tag">人群心智</span>
+      <h3>4 大人群 · 各有刚需爆品</h3>
+      <p>👶 <b>儿童早餐</b>：高钙厚切牛乳吐司 / 烤酸奶片 / AD钙奶　·　🧘‍♀️ <b>中年女性养生</b>：祛湿草本茶 / 八珍糕 / 燕窝银耳谷物粉　·　💄 <b>年轻女性颜值</b>：玫瑰花茶 / 即食花胶 / 榴莲冰粽 / 高颜值礼盒　·　🥃 <b>男性宴请送礼</b>：酱香白酒 / 凤梨酥铁盒 / 酱牛肉真空礼盒</p>
+    </div>
+  </div>
+
+  <!-- 拓展机会清单 -->
+  <div class="section-h">
+    <span class="num reveal">02 · OPPORTUNITY</span>
+    <span class="title reveal d1">22+ 拓展机会 · 直接拿去用<span class="badge">P0</span></span>
+    <span class="desc reveal d2">去年爆品 · ADQ 暂无类似品在投</span>
+  </div>
+
+  <div class="opportunities">
+    <div class="opp-card reveal d1">
+      <div class="cat"><span class="emoji">🥬</span>生鲜（夏季餐桌刚需）</div>
+      <div class="items"><span>水果黄瓜</span><span>洋葱</span><span>迷你土豆</span><span>五彩椒/甜椒</span></div>
+    </div>
+    <div class="opp-card reveal d1">
+      <div class="cat"><span class="emoji">🥛</span>乳品冷饮（儿童早餐心智）</div>
+      <div class="items"><span>AD钙奶</span><span>旺仔牛奶</span><span>蒙乳</span><span>烤酸奶片</span><span>黄油吐司</span></div>
+    </div>
+    <div class="opp-card reveal d2">
+      <div class="cat"><span class="emoji">🍞</span>休闲食品（节令送礼）</div>
+      <div class="items"><span>凤梨酥铁盒</span><span>烤酸奶片</span><span>五仁月饼</span><span>卤汁花生</span></div>
+    </div>
+    <div class="opp-card reveal d2">
+      <div class="cat"><span class="emoji">🐾</span>宠物生活（养宠刚需）</div>
+      <div class="items"><span>派斯乐维生素</span><span>蒸煮鸡胸肉</span><span>猫草果冻</span><span>钙片</span></div>
+    </div>
+    <div class="opp-card reveal d3">
+      <div class="cat"><span class="emoji">🍵</span>茗茶（女性养生）</div>
+      <div class="items"><span>玫瑰花茶（重瓣）</span><span>昆仑雪菊</span></div>
+    </div>
+    <div class="opp-card reveal d3">
+      <div class="cat"><span class="emoji">🍶</span>粮油调味（家庭DIY）</div>
+      <div class="items"><span>甜酒曲/酿酒酵母</span></div>
+    </div>
+    <div class="opp-card reveal d4">
+      <div class="cat"><span class="emoji">🍻</span>酒类（年轻化场景）</div>
+      <div class="items"><span>孝感米酒醪糟</span><span>小瓶口粮酒（100ml）</span></div>
+    </div>
+    <div class="opp-card reveal d4">
+      <div class="cat"><span class="emoji">🥗</span>保健食品（控卡代餐）</div>
+      <div class="items"><span>燕麦麸皮（高纤代餐）</span></div>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div class="cta reveal">
+    <h2>👉 点击查看完整报告</h2>
+    <p>10 大品类卡片 · 3295 行明细排行榜 · 可按 ADQ 状态筛选 · 完整拓展线索</p>
+    <a class="url" href="https://winglee777.github.io/duanwu-food-sph-guide/" target="_blank">
+      winglee777.github.io/duanwu-food-sph-guide<span class="arrow">→</span>
+    </a>
+  </div>
+
+  <!-- 底部备注 -->
+  <div class="footer-note">
+    <div class="left">DATA SOURCE / 友望视频号小店</div>
+    <div>分析方法：泛关键词比对（品种/成分/品牌词 OR 匹配） · 全量数据请联系 wingsdli</div>
+  </div>
+
+</div>
+
+<script>
+// 滚动揭示
+const io = new IntersectionObserver(es => {
+  es.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.1, rootMargin: '0px 0px -10% 0px' });
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+</body>
+</html>
