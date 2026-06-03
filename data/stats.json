@@ -1,52 +1,52 @@
 {
   "生鲜": {
-    "count": 574,
-    "total_sales": 3389478,
-    "total_gmv": 173699750.16
-  },
-  "粮油调味": {
-    "count": 354,
-    "total_sales": 3474629,
-    "total_gmv": 99942407.72
+    "count": 489,
+    "total_sales": 2995222,
+    "total_gmv": 157253715.84
   },
   "休闲食品": {
-    "count": 500,
-    "total_sales": 3081548,
-    "total_gmv": 77108201.77
+    "count": 714,
+    "total_sales": 4473912,
+    "total_gmv": 125735254.48
   },
   "传统滋补": {
-    "count": 308,
-    "total_sales": 1265333,
-    "total_gmv": 76080483.23
+    "count": 318,
+    "total_sales": 1367172,
+    "total_gmv": 81852423.5
   },
-  "酒类": {
-    "count": 495,
-    "total_sales": 324445,
-    "total_gmv": 47318066.98
+  "粮油调味": {
+    "count": 206,
+    "total_sales": 2305913,
+    "total_gmv": 60194285.77
   },
   "乳品冷饮": {
-    "count": 268,
-    "total_sales": 1253993,
-    "total_gmv": 46129289.79
+    "count": 273,
+    "total_sales": 1214981,
+    "total_gmv": 49025258.45
+  },
+  "酒类": {
+    "count": 496,
+    "total_sales": 330024,
+    "total_gmv": 47526782.18
   },
   "饮料冲调": {
-    "count": 212,
-    "total_sales": 1031221,
-    "total_gmv": 42904696.46
+    "count": 241,
+    "total_sales": 1175271,
+    "total_gmv": 44664250.3
   },
   "保健食品/营养补充": {
-    "count": 126,
-    "total_sales": 326362,
-    "total_gmv": 13883299.99
+    "count": 117,
+    "total_sales": 295143,
+    "total_gmv": 10867262.1
   },
   "宠物生活": {
-    "count": 338,
-    "total_sales": 215874,
-    "total_gmv": 8007335.94
+    "count": 322,
+    "total_sales": 207014,
+    "total_gmv": 8003831.42
   },
   "茗茶": {
-    "count": 36,
-    "total_sales": 149383,
-    "total_gmv": 6672352.53
+    "count": 35,
+    "total_sales": 147614,
+    "total_gmv": 6622820.53
   }
 }
