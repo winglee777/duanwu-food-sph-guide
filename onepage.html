@@ -272,5 +272,10 @@ const io = new IntersectionObserver(es => {
 }, { threshold: 0.1, rootMargin: '0px 0px -10% 0px' });
 document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 </script>
+<div style="text-align:center;padding:14px 16px;font-size:12px;color:rgba(255,255,255,0.55);background:#0F1A14">
+  本页累计访问 <span id="busuanzi_value_site_pv" style="color:#E8B842;font-weight:600">…</span> 次 ·
+  独立访客 <span id="busuanzi_value_site_uv" style="color:#E8B842;font-weight:600">…</span> 人
+</div>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 </body>
 </html>
